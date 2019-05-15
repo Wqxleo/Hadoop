@@ -1,0 +1,15 @@
+2019-04-12 17:34:24,065 ERROR [Thread-13] master.HMaster: Failed to become active master
+org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-1489088506-127.0.1.1-1553486086743:blk_1073741852_1028 file=/hbase/hbase.version
+
+
+19/04/14 21:39:21 INFO client.RpcRetryingCallerImpl: Call exception, tries=6, retries=16,
+ started=8535 ms ago,cancelled=false, msg=Call to ubuntu/192.168.112.128:16020 failed on connection
+ exception: org.apache.hbase.thirdparty.io.netty.channel.AbstractChannel$AnnotatedConnectException:
+ Connection refused: no further information: ubuntu/192.168.112.128:16020, details=row 'testTable'
+ on table 'hbase:meta' at region=hbase:meta,,1.1588230740, hostname=ubuntu,16020,1555248226629,
+ seqNum=-1, see https://s.apache.org/timeout
+
+
+
+19/04/14 21:39:26 INFO client.RpcRetryingCallerImpl: Call exception, tries=7, retries=16, started=13549 ms ago, cancelled=false, msg=Call to ubuntu/192.168.112.128:16020 failed on connection exception: org.apache.hbase.thirdparty.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: ubuntu/192.168.112.128:16020, details=row 'testTable' on table 'hbase:meta' at region=hbase:meta,,1.1588230740, hostname=ubuntu,16020,1555248226629, seqNum=-1, see https://s.apache.org/timeout
+

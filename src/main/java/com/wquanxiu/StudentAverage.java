@@ -116,7 +116,6 @@ public class StudentAverage {
 
         protected void reduce(Text key, Iterable<Text> values, Context context)
                 throws IOException, InterruptedException {
-//            i++;
             int sum = 0;
             Vector<String> highGrade = new Vector<String>();
             Vector<String> lowGrade = new Vector<String>();
@@ -133,11 +132,8 @@ public class StudentAverage {
                 String[] information = value.toString().split(" ");
                 String name = information[0];
                 int grade = Integer.valueOf(information[1]);
-
                 //计算总分
                 sum += grade;
-
-
                 //计算最高分，并记录姓名
                 if(grade>max){
                     max = grade;
@@ -157,8 +153,6 @@ public class StudentAverage {
                 else if(grade == min){
                     lowGrade.add(name);
                 }
-
-
                 //成绩分等级
                 if(grade >= 90){
                     Y++;
@@ -175,13 +169,8 @@ public class StudentAverage {
                 else {
                     B++;
                 }
-
-
             }
-
-
             String avg = "Average score is "+ String.valueOf(sum / j)+"\n";
-
             String maxScore= "\nMaxscore: "+String.valueOf(max)+ " studets:";
             for(String element: highGrade){
                 maxScore += (" " + element);
@@ -195,14 +184,8 @@ public class StudentAverage {
             minScore+="\n";
 
             String rank = "The rank : "+ "A is "+String.valueOf(Y)+", B is "+String.valueOf(L)+", C is "+String.valueOf(Z)+", D is "+String.valueOf(J)+", E is "+String.valueOf(B)+".\n";
-
             String result = maxScore+minScore+avg+rank;
-
-
             context.write(new Text(key), new Text(result));
-
-
-
         };
     }
 
@@ -225,9 +208,6 @@ public class StudentAverage {
 
 
     public static class TotalReduce extends Reducer<Text, Text, Text, Text> {
-
-
-
         protected void reduce(Text key, Iterable<Text> values, Context context)
                 throws IOException, InterruptedException {
 

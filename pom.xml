@@ -43,6 +43,34 @@
             <version>2.7.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase</artifactId>
+            <version>2.0.5</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-common</artifactId>
+            <version>2.0.5</version>
+            <type>pom</type>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-client -->
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>2.0.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc -->
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-jdbc</artifactId>
+            <version>2.3.4</version>
+        </dependency>
 
 
 
